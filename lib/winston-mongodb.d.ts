@@ -146,6 +146,20 @@ declare module 'winston-mongodb' {
         * @memberof MongoDBConnectionOptions
         */
        expireAfterSeconds?: number;
+        /**
+         * Will disable the collection creation at startup.
+         *
+         * @type {boolean}
+         * @memberof MongoDBConnectionOptions
+         */
+        skipCollectionCreation?: boolean;
+        /**
+         * A function that takes the default log document and transform it to another document.
+         *
+         * @type {Function}
+         * @memberof MongoDBConnectionOptions
+         */
+        transformDocument?: Function;
     }
     
     const MongoDB: MongoDBTransportInstance;
